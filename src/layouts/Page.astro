@@ -1,0 +1,76 @@
+---
+import Section from "../components/Section.astro";
+import IconLabel from "../components/IconLabel.astro";
+import ExternalLinkText from "../components/ExternalLinkText.astro";
+import InternalLink from "../components/InternalLink.astro";
+
+const pageTitle = "Austin Liu";
+---
+
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap"
+      rel="stylesheet"
+    />
+    <meta name="viewport" content="width=device-width" />
+    <meta name="generator" content={Astro.generator} />
+    <title>{pageTitle}</title>
+  </head>
+  <body class="bg-sky-50">
+    <div
+      class="w-full flex flex-col justify-center px-20 pt-12 lg:block lg:m-auto lg:w-[1024px] lg:pt-12 lg:px-24"
+    >
+      <header class="lg:w-64 lg:fixed lg:float-left">
+        <Section>
+          <img
+            src="/portrait.png"
+            alt=""
+            class="rounded-md mt-1 h-96 min-w-full object-cover object-[60%_80%] lg:h-fit lg:w-fit"
+          />
+          <h1 class="text-4xl font-bold mt-3 mb-1.5">Austin Liu</h1>
+          <p>Senior at Los Altos High School</p>
+        </Section>
+        <Section>
+          <IconLabel src="/icons/map-pin.svg"><p>Los Altos, CA</p></IconLabel>
+        </Section>
+        <Section>
+          <IconLabel src="/icons/home.svg">
+            <InternalLink href="/">Home</InternalLink>
+          </IconLabel>
+          <IconLabel src="/icons/mail.svg">
+            <InternalLink href="/contact">Contact</InternalLink>
+          </IconLabel>
+        </Section>
+        <Section>
+          <IconLabel src="/icons/github.svg">
+            <ExternalLinkText href="https://www.github.com/ajzliu/"
+              >GitHub</ExternalLinkText
+            >
+          </IconLabel>
+          <IconLabel src="/icons/linkedin.svg">
+            <ExternalLinkText href="https://www.linkedin.com/in/ajzliu/"
+              >Linkedin</ExternalLinkText
+            >
+          </IconLabel>
+        </Section>
+      </header>
+
+      <hr class="rounded-md border-2 w-[80%] mx-auto my-6 lg:hidden" />
+
+      <main class="lg:w-[32rem] lg:float-right lg:pb-16">
+        <slot />
+      </main>
+
+      <footer
+        class="mx-auto my-8 lg:m-0 lg:w-64 text-slate-700 lg:fixed lg:float-left lg:bottom-16"
+      >
+        <p><small>Built with ❤️ using Astro and Tailwind</small></p>
+      </footer>
+    </div>
+  </body>
+</html>
