@@ -1,0 +1,16 @@
+---
+import AstroPage from "../layouts/AstroPage.astro";
+import ArticleImage from "../components/ArticleImage.astro";
+
+import SweetAndSourRibs01 from "../assets/SweetAndSourRibs01.png";
+import SweetAndSourRibs02 from "../assets/SweetAndSourRibs02.png";
+import SweetAndSourRibs03 from "../assets/SweetAndSourRibs03.png";
+import MapoTofu01 from "../assets/MapoTofu01.png";
+---
+
+<AstroPage title="Cooking" description="Some of the food I've cooked!">
+  <ArticleImage src={MapoTofu01} alt="Mapo Tofu" />
+  <ArticleImage src={SweetAndSourRibs01} alt="Sweet and Sour Ribs (糖醋排骨)" />
+  <ArticleImage src={SweetAndSourRibs02} alt="Sweet and Sour Ribs (糖醋排骨)" />
+  <ArticleImage src={SweetAndSourRibs03} alt="Sweet and Sour Ribs (糖醋排骨)" />
+</AstroPage>
