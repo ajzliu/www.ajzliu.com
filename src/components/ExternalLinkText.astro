@@ -9,5 +9,5 @@ const { href = "" } = Astro.props;
 <div
   class="my-1 flex flex-row justify-start items-center box-content font-medium pb-px border-b border-sky-500 hover:pb-0 hover:border-b-2"
 >
-  <a href={href} class="after:content-['_↗']"><slot /></a>
+  <a href={href} rel="prefetch" class="after:content-['_↗']"><slot /></a>
 </div>
