@@ -5,6 +5,7 @@ import Section from "../components/Section.astro";
 import IconLabel from "../components/IconLabel.astro";
 import ExternalLinkText from "../components/ExternalLinkText.astro";
 import InternalLink from "../components/InternalLink.astro";
+import { Picture } from "astro-imagetools/components";
 ---
 
 <html lang="en">
@@ -28,10 +29,16 @@ import InternalLink from "../components/InternalLink.astro";
     >
       <header class="text-sm lg:w-64 lg:fixed lg:float-left">
         <Section>
-          <img
-            src="/portrait.png"
-            alt=""
-            class="rounded-md mt-1 h-96 min-w-full object-cover object-[60%_80%] lg:h-fit lg:w-fit"
+          <Picture
+            class="rounded-md"
+            src="/src/assets/AustinLiu.png"
+            alt="Image of Austin Liu"
+            attributes={{
+              img: {
+                class:
+                  "rounded-md mt-1 h-96 min-w-full object-cover object-[60%_80%] lg:h-fit lg:w-fit",
+              },
+            }}
           />
           <h1 class="text-3xl font-bold mt-3 mb-1.5">Austin Liu</h1>
           <p>Senior at Los Altos High School</p>
