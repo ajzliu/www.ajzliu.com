@@ -5,7 +5,6 @@ import Section from "../components/Section.astro";
 import IconLabel from "../components/IconLabel.astro";
 import ExternalLinkText from "../components/ExternalLinkText.astro";
 import InternalLink from "../components/InternalLink.astro";
-import { Picture } from "astro-imagetools/components";
 ---
 
 <html lang="en">
@@ -29,17 +28,28 @@ import { Picture } from "astro-imagetools/components";
     >
       <header class="text-sm lg:w-64 lg:fixed lg:float-left">
         <Section>
-          <Picture
+          <picture>
+            <source srcset="/portrait.avif" type="image/avif" />
+            <source srcset="/portrait.webp" type="image/webp" />
+            <img
+              src="/portrait.jpg"
+              alt="Photo of Austin Liu"
+              class="rounded-md mt-1 h-96 min-w-full object-cover object-[60%_80%] lg:h-fit lg:w-fit"
+            />
+          </picture>
+          <!-- <Picture
             class="rounded-md"
             src="/src/assets/AustinLiu.png"
             alt="Image of Austin Liu"
+            preload="png"
+            placeholder="none"
             attributes={{
               img: {
                 class:
                   "rounded-md mt-1 h-96 min-w-full object-cover object-[60%_80%] lg:h-fit lg:w-fit",
               },
             }}
-          />
+          /> -->
           <h1 class="text-3xl font-bold mt-3 mb-1.5">Austin Liu</h1>
           <p>Senior at Los Altos High School</p>
         </Section>
@@ -89,7 +99,7 @@ import { Picture } from "astro-imagetools/components";
       </main>
 
       <footer
-        class="mx-auto my-8 lg:m-0 lg:w-64 text-slate-700 lg:fixed lg:float-left lg:bottom-6"
+        class="mx-auto my-6 lg:m-0 lg:w-64 text-slate-700 lg:fixed lg:float-left lg:bottom-6"
       >
         <p><small>Built with ❤️ using Astro and Tailwind</small></p>
         <p><small>© 2022 Austin Liu</small></p>
