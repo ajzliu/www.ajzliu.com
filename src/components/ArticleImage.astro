@@ -5,5 +5,13 @@ const { src, alt } = Astro.props;
 ---
 
 <div class="my-4 object-cover last:mt-4 last:mb-1 first:mb-4 first:mt-1">
-  <Picture src={src} alt={alt} />
+  <Picture
+    src={src}
+    alt={alt}
+    attributes={{
+      img: {
+        class: "rounded",
+      },
+    }}
+  />
 </div>
