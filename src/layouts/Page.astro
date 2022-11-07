@@ -1,10 +1,10 @@
 ---
+const { frontmatter } = Astro.props;
+
 import Section from "../components/Section.astro";
 import IconLabel from "../components/IconLabel.astro";
 import ExternalLinkText from "../components/ExternalLinkText.astro";
 import InternalLink from "../components/InternalLink.astro";
-
-const pageTitle = "Austin Liu";
 ---
 
 <html lang="en">
@@ -19,20 +19,21 @@ const pageTitle = "Austin Liu";
     />
     <meta name="viewport" content="width=device-width" />
     <meta name="generator" content={Astro.generator} />
-    <title>{pageTitle}</title>
+
+    <slot name="head" />
   </head>
   <body class="bg-sky-50">
     <div
-      class="w-full flex flex-col justify-center px-20 pt-12 lg:block lg:m-auto lg:w-[1024px] lg:pt-12 lg:px-24"
+      class="w-full flex flex-col justify-center px-20 mt-10 lg:block lg:m-auto lg:w-[1024px] lg:mt-10 lg:px-24"
     >
-      <header class="lg:w-64 lg:fixed lg:float-left">
+      <header class="text-sm lg:w-64 lg:fixed lg:float-left">
         <Section>
           <img
             src="/portrait.png"
             alt=""
             class="rounded-md mt-1 h-96 min-w-full object-cover object-[60%_80%] lg:h-fit lg:w-fit"
           />
-          <h1 class="text-4xl font-bold mt-3 mb-1.5">Austin Liu</h1>
+          <h1 class="text-3xl font-bold mt-3 mb-1.5">Austin Liu</h1>
           <p>Senior at Los Altos High School</p>
         </Section>
         <Section>
@@ -41,6 +42,15 @@ const pageTitle = "Austin Liu";
         <Section>
           <IconLabel src="/icons/home.svg">
             <InternalLink href="/">Home</InternalLink>
+          </IconLabel>
+          <IconLabel src="/icons/book-open.svg">
+            <InternalLink href="/research">Research</InternalLink>
+          </IconLabel>
+          <IconLabel src="/icons/coffee.svg">
+            <InternalLink href="/cooking">Cooking</InternalLink>
+          </IconLabel>
+          <IconLabel src="/icons/camera.svg">
+            <InternalLink href="/photography">Photography</InternalLink>
           </IconLabel>
           <IconLabel src="/icons/mail.svg">
             <InternalLink href="/contact">Contact</InternalLink>
@@ -57,19 +67,25 @@ const pageTitle = "Austin Liu";
               >Linkedin</ExternalLinkText
             >
           </IconLabel>
+          <IconLabel src="/icons/ORCIDiD_iconbwvector.svg">
+            <ExternalLinkText href="https://orcid.org/0000-0002-2690-6164"
+              >ORCiD</ExternalLinkText
+            >
+          </IconLabel>
         </Section>
       </header>
 
       <hr class="rounded-md border-2 w-[80%] mx-auto my-6 lg:hidden" />
 
-      <main class="lg:w-[32rem] lg:float-right lg:pb-16">
+      <main class="lg:w-[32rem] lg:float-right lg:mb-6">
         <slot />
       </main>
 
       <footer
-        class="mx-auto my-8 lg:m-0 lg:w-64 text-slate-700 lg:fixed lg:float-left lg:bottom-16"
+        class="mx-auto my-8 lg:m-0 lg:w-64 text-slate-700 lg:fixed lg:float-left lg:bottom-6"
       >
         <p><small>Built with ❤️ using Astro and Tailwind</small></p>
+        <p><small>© 2022 Austin Liu</small></p>
       </footer>
     </div>
   </body>

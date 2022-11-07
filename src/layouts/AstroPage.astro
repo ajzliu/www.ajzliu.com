@@ -1,8 +1,29 @@
 ---
 import Page from "./Page.astro";
+import { SEO } from "astro-seo";
+
+const { title, description } = Astro.props;
 ---
 
 <Page>
+  <SEO
+    title={title + " | Austin Liu"}
+    description={description}
+    openGraph={{
+      basic: {
+        title: "Austin Liu",
+        type: "profile",
+        image: "/portrait.png",
+      },
+      optional: {
+        description: description,
+      },
+      image: {
+        alt: "Image of Austin Liu",
+      },
+    }}
+    slot="head"
+  />
   <div>
     <slot />
   </div>

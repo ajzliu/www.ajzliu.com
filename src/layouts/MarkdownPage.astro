@@ -1,10 +1,31 @@
 ---
 import Page from "./Page.astro";
+import { SEO } from "astro-seo";
+
+const { frontmatter } = Astro.props;
 ---
 
 <Page>
+  <SEO
+    title={frontmatter.title + " | Austin Liu"}
+    description={frontmatter.description}
+    openGraph={{
+      basic: {
+        title: "Austin Liu",
+        type: "profile",
+        image: "/portrait.png",
+      },
+      optional: {
+        description: frontmatter.description,
+      },
+      image: {
+        alt: "Image of Austin Liu",
+      },
+    }}
+    slot="head"
+  />
   <div
-    class="prose prose-a:no-underline prose-a:font-medium prose-a:pb-px prose-a:border-b prose-a:border-sky-500 hover:prose-a:pb-0 hover:prose-a:border-b-2 after:prose-a:content-['_↗']"
+    class="prose prose-a:no-underline prose-a:font-medium prose-a:pb-px prose-a:border-b prose-a:border-sky-500 hover:prose-a:pb-0 hover:prose-a:border-b-2"
   >
     <slot />
   </div>
