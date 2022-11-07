@@ -24,6 +24,8 @@ export default defineConfig({
     sitemap(),
     prefetch(),
     robotsTxt(),
-    compress(),
+    compress({
+      img: false,
+    }),
   ],
 });
