@@ -1,30 +1,20 @@
 ---
 import AstroPage from "../layouts/AstroPage.astro";
 import ArticleImage from "../components/ArticleImage.astro";
-
-import SanDiego01 from "../assets/SanDiego01.jpg";
-import SanDiego02 from "../assets/SanDiego02.jpg";
-import SanDiego03 from "../assets/SanDiego03.jpg";
-import Seattle01 from "../assets/Seattle01.jpg";
-import HalfMoonBay01 from "../assets/HalfMoonBay01.jpg";
-import JoshuaTree01 from "../assets/JoshuaTree01.jpg";
-import UW from "../assets/UW.png";
-import MountRainier01 from "../assets/MountRainier01.png";
-import MountRainier02 from "../assets/MountRainier02.png";
-import MountRainier03 from "../assets/MountRainier03.png";
-import MountRainier04 from "../assets/MountRainier04.png";
 ---
 
 <AstroPage title="Photography" description="Some of the photos I've taken!">
-  <ArticleImage src={SanDiego01} alt="San Diego" />
-  <ArticleImage src={SanDiego02} alt="San Diego" />
-  <ArticleImage src={SanDiego03} alt="San Diego" />
-  <ArticleImage src={Seattle01} alt="Seattle Great Wheel" />
-  <ArticleImage src={HalfMoonBay01} alt="Half Moon Bay" />
-  <ArticleImage src={JoshuaTree01} alt="Joshua Tree National Park" />
-  <ArticleImage src={UW} alt="University of Washington" />
-  <ArticleImage src={MountRainier01} alt="Mount Rainier" />
-  <ArticleImage src={MountRainier02} alt="Mount Rainier" />
-  <ArticleImage src={MountRainier03} alt="Mount Rainier" />
-  <ArticleImage src={MountRainier04} alt="Mount Rainier" />
+  <ArticleImage src="/src/assets/SanDiego01.png" alt="San Diego" />
+  <ArticleImage src="/src/assets/SanDiego02.png" alt="San Diego" />
+  <ArticleImage src="/src/assets/SanDiego03.png" alt="San Diego" />
+  <ArticleImage src="/src/assets/Seattle01.png" alt="Seattle Great Wheel" />
+  <ArticleImage src="/src/assets/HalfMoonBay01.png" alt="Half Moon Bay" />
+  <ArticleImage
+    src="/src/assets/JoshuaTree01.png"
+    alt="Joshua Tree National Park"
+  />
+  <ArticleImage src="/src/assets/UW.png" alt="University of Washington" />
+  <ArticleImage src="/src/assets/MountRainier01.png" alt="Mount Rainier" />
+  <ArticleImage src="/src/assets/MountRainier02.png" alt="Mount Rainier" />
+  <ArticleImage src="/src/assets/MountRainier03.png" alt="Mount Rainier" />
 </AstroPage>
