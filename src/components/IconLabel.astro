@@ -6,8 +6,8 @@ interface Props {
 const { src = "" } = Astro.props;
 ---
 
-<div class="my-1 flex flex-row justify-start items-center">
-  <img src={src} alt="" class="h-[1.125rem] mr-1.5" />
+<div class="flex flex-row justify-start items-center">
+  <img src={src} alt="" class="h-4 mr-1.5" />
   <div class="w-fit h-fit">
     <slot />
   </div>
