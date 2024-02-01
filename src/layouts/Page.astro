@@ -22,21 +22,20 @@ import InternalLink from "../components/InternalLink.astro";
 
     <slot name="head" />
   </head>
-  <body class="bg-sky-50">
+  <body class="bg-slate-200">
     <div
       class="w-full flex flex-col justify-center px-20 mt-10 lg:block lg:m-auto lg:w-[1024px] lg:mt-10 lg:px-24"
     >
       <header class="text-sm lg:w-64 lg:fixed lg:float-left">
         <Section>
-          <picture>
-            <source srcset="/portrait.avif" type="image/avif" />
-            <source srcset="/portrait.webp" type="image/webp" />
+          <!-- <picture>
+            <source srcset="/image.jpeg" type="image/jpeg" />
             <img
-              src="/portrait.jpg"
-              alt="Photo of Austin Liu"
+              src="/image.jpeg"
+              alt="Train tracks in Hakone, Kanagawa Prefecture"
               class="rounded-md mt-1 h-96 min-w-full object-cover object-[60%_80%] lg:h-fit lg:w-fit"
             />
-          </picture>
+          </picture> -->
           <!-- <Picture
             class="rounded-md"
             src="/src/assets/AustinLiu.png"
@@ -51,10 +50,10 @@ import InternalLink from "../components/InternalLink.astro";
             }}
           /> -->
           <h1 class="text-2xl font-bold mt-3 mb-1.5">Austin Liu</h1>
-          <p>Senior at Los Altos High School</p>
+          <p>Freshman at Duke University</p>
         </Section>
         <Section>
-          <IconLabel src="/icons/map-pin.svg"><p>Los Altos, CA</p></IconLabel>
+          <IconLabel src="/icons/map-pin.svg"><p>Durham, NC</p></IconLabel>
         </Section>
         <Section>
           <IconLabel src="/icons/home.svg">
@@ -63,12 +62,12 @@ import InternalLink from "../components/InternalLink.astro";
           <IconLabel src="/icons/book-open.svg">
             <InternalLink href="/research">Research</InternalLink>
           </IconLabel>
-          <IconLabel src="/icons/camera.svg">
+          <!-- <IconLabel src="/icons/camera.svg">
             <InternalLink href="/photography">Photography</InternalLink>
           </IconLabel>
           <IconLabel src="/icons/coffee.svg">
             <InternalLink href="/cooking">Cooking</InternalLink>
-          </IconLabel>
+          </IconLabel> -->
           <IconLabel src="/icons/mail.svg">
             <InternalLink href="/contact">Contact</InternalLink>
           </IconLabel>
@@ -101,8 +100,7 @@ import InternalLink from "../components/InternalLink.astro";
       <footer
         class="mx-auto my-6 lg:m-0 lg:w-64 text-slate-700 lg:fixed lg:float-left lg:bottom-6"
       >
-        <p><small>Built with ❤️ using Astro and Tailwind</small></p>
-        <p><small>© 2022 Austin Liu</small></p>
+        <p><small>© 2024 Austin Liu</small></p>
       </footer>
     </div>
   </body>
